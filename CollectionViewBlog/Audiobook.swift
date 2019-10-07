@@ -10,12 +10,10 @@ import Foundation
 
 struct Audiobook {
     let name: String
-//    let author: String
     let coverImage: String
     
     init(dictionary: AudiobookJSON) {
         self.name = dictionary["title"] as! String
-//        self.author = dictionary["artistName"] as! String
         self.coverImage = dictionary["url"] as! String
     }
     

@@ -68,24 +68,6 @@ struct APIClient {
         }
         task.resume()
         
-//        let url = URL(string: "http://jsonplaceholder.typicode.com/photos")
-//
-//        let session = URLSession.shared
-//
-//        guard let unwrappedURL = url else { print("Error unwrapping URL"); return }
-//
-//        let dataTask = session.dataTask(with: unwrappedURL) { (data, response, error) in
-//
-//            guard let unwrappedDAta = data else { print("Error unwrapping data"); return }
-//
-//            do {
-//                let responseJSON = try JSONSerialization.jsonObject(with: unwrappedDAta, options: []) as? AudiobookJSON
-//                completion(responseJSON)
-//            } catch {
-//                print("Could not get API data. \(error), \(error.localizedDescription)")
-//            }
-//        }
-//        dataTask.resume()
     }
 }
 

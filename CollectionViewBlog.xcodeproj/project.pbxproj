@@ -16,7 +16,6 @@
 		45955F801F0AF5BC00E071BC /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */; };
 		45955F841F0AF8C100E071BC /* Audiobook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F831F0AF8C100E071BC /* Audiobook.swift */; };
 		45955F861F0AFA9D00E071BC /* DataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45955F851F0AFA9D00E071BC /* DataStore.swift */; };
-		50D5C57D234B1B8C00289759 /* ImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 50D5C57C234B1B8B00289759 /* ImageProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +30,6 @@
 		45955F7F1F0AF5BC00E071BC /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		45955F831F0AF8C100E071BC /* Audiobook.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Audiobook.swift; sourceTree = "<group>"; };
 		45955F851F0AFA9D00E071BC /* DataStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataStore.swift; sourceTree = "<group>"; };
-		50D5C57C234B1B8B00289759 /* ImageProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageProvider.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,7 +97,6 @@
 		45955F6A1F0AEF9600E071BC /* CollectionViewBlog */ = {
 			isa = PBXGroup;
 			children = (
-				50D5C57C234B1B8B00289759 /* ImageProvider.swift */,
 				45955F6B1F0AEF9600E071BC /* AppDelegate.swift */,
 				454BE1B71F0C156800B9FF55 /* Controller */,
 				454BE1B61F0C155900B9FF55 /* View */,
@@ -189,7 +186,6 @@
 				45955F6C1F0AEF9600E071BC /* AppDelegate.swift in Sources */,
 				45955F841F0AF8C100E071BC /* Audiobook.swift in Sources */,
 				45955F801F0AF5BC00E071BC /* CollectionViewCell.swift in Sources */,
-				50D5C57D234B1B8C00289759 /* ImageProvider.swift in Sources */,
 				45955F7E1F0AF22100E071BC /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

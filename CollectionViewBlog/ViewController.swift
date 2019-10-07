@@ -16,13 +16,20 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     private let imageHeight = 600
 
     private var imageCache = Dictionary<IndexPath, UIImage>()
-    var imageProvider: ImageProvider?
 
     let store = DataStore.sharedInstance
 
     override func viewDidLoad() {
         super.viewDidLoad()
-                
+        
+        let flowLayout = UICollectionViewFlowLayout()
+        flowLayout.itemSize = CGSize(width: UIScreen.main.bounds.width/2 - 10, height: UIScreen.main.bounds.height/2 - 10)
+        flowLayout.sectionInset = UIEdgeInsets(top: 0, left: 5, bottom: 0, right: 5)
+        flowLayout.scrollDirection = .horizontal
+        flowLayout.minimumInteritemSpacing = 0.0
+
+        self.collectionView.collectionViewLayout = flowLayout
+        
         store.getBooks {
             self.collectionView.reloadSections(IndexSet(integer: 0))
         }
@@ -35,7 +42,22 @@ class ViewController: UIViewController, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "collectionViewCell", for: indexPath) as! CollectionViewCell
+        cell.contentView.layer.cornerRadius = 10
+        cell.contentView.layer.borderWidth = 5.0
         
+        cell.contentView.layer.borderColor = UIColor.white.cgColor
+        cell.contentView.layer.masksToBounds = true
+        
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 4.0, height: 4.0)
+        cell.layer.shadowRadius = 2.0
+        cell.layer.shadowOpacity = 1.0
+        cell.layer.masksToBounds = false
+        cell.layer.shadowPath = UIBezierPath(roundedRect:cell.bounds, cornerRadius:cell.contentView.layer.cornerRadius).cgPath
+        cell.backgroundColor = UIColor.clear
+        
+        cell.bookLabel.transform = CGAffineTransform(rotationAngle: CGFloat(Double.pi / 4))
+
         let book = store.audiobooks[indexPath.row]
         
 //        cell.displayContent(image: store.images[indexPath.row], title: book.name)
